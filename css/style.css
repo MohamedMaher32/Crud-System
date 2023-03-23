@@ -1,0 +1,15 @@
+body{
+    background-color: #144272;
+    color: #fff;
+}
+.main-cont{
+    background-color: #144272;
+    box-shadow: 0 0 30px #000000;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 2px #fff;
+}
+table i{
+    cursor: pointer;
+}
+

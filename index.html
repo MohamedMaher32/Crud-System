@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>crud system</title>
+</head>
+<body>
+  <div class="container main-cont my-5 pb-3 rounded-3">
+    <form>
+      <h1 class="text-center py-4">CRUD SYSTEM</h1>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control bg-dark text-white border-0" id="productName">
+      </div>
+      <div class="pt-4">
+        <label for="productPrice">Product Price</label>
+        <input type="number" class="form-control bg-dark text-white border-0" id="productPrice">
+      </div>
+      <div class="pt-4">
+        <label for="productCatogry">Product Catogry</label>
+        <input type="text" class="form-control bg-dark text-white border-0" id="productCatogry">
+      </div>
+      <div class="pt-4">
+        <label for="productText">Product Description</label>
+        <textarea id="productText" class=" form-control bg-dark text-white border-0"></textarea>
+      </div>
+      <div class="alert text-danger text-center mt-2 d-none" id="alertWrong">Please Enter all Data</div>
+      <button id="addproduct" type="button" class="btn btn-success mt-3" onclick="add()" >Add Product</button>
+      <button id="editproduct" type="button" class="btn btn-info mt-3" style="display: none;" onclick="edit()" >Edit Product</button>
+      <button type="button" class="btn btn-danger mt-3" onclick="clearform()">Clear Form</button>
+    </form>
+
+    <div class="container">
+      <input type="text"id="productsearch" class="form-control bg-dark text-white border-0 w-50 mx-auto my-5" onkeyup="search()" placeholder="search.....">
+    </div>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped text-center table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Catogry</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+ <script src="js/main.js"></script>   
+</body>
+</html>
